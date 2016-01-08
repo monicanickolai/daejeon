@@ -1,3 +1,24 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+  text-align: center;
+  font-size: 5em;
+  color: gray;
+  margin-top: 100px;
+}
+
+h2 {
+  font-family: verdana;
+  text-align: center;
+  font-size: 2em;
+  color: gray;
+  padding: 5px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: right;
+	padding: 5px;
+	font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+}
