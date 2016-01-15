@@ -21,4 +21,14 @@ footer {
 	text-align: right;
 	padding: 5px;
 	font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  padding: 0; 
 }
