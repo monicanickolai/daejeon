@@ -2,19 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-th {
-  font-family: verdana;
-  padding: 5px;
+html, body { 
+  height: auto;
+  min-height: 100%; 
+  margin: 0; 
+  padding: 0; 
 }
 
-table {
-  margin: 50px;
+footer {
+  clear: both;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
 }
 
-.field {
-  margin-left: 150px;
-}
-
-.actions {
-  margin-left: 150px;
-}
+h3 {
+  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+  text-align: center;
+  font-size: 3em;
+  color: gray;
+  margin-top: 100px;
+ }
