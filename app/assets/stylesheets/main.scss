@@ -75,25 +75,20 @@ div {
 
 /*body*/
 
-html, body { 
-  height: auto;
-  min-height: 100%; 
-  margin: 0; 
-  padding: 0; 
-}
-
-body {
+body { 
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 footer {
-  clear: both;
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: right;
+  padding: 5px;
+  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
 }
