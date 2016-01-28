@@ -14,12 +14,12 @@
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Daejeon Arts Collective Online Gallery</a>
+      <a class="navbar-brand" <%= link_to 'Daejeon Arts Collective Online Gallery', root_path %>></a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to 'Products', products_path %></li>
+      <li><%= link_to 'About', static_pages_about_path %></li>
+      <li><%= link_to 'Contact', static_pages_contact_path %></li>
     </ul>
   </div>
 </nav>

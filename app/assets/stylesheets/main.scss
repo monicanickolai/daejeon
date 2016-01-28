@@ -6,6 +6,9 @@ h3 {
   color: gray;
   margin-top: 100px;
  }
+#addproduct {
+  text-align: center;
+}
 
 #error_explanation {
   width: 450px;
@@ -16,7 +19,30 @@ h3 {
   background-color: #f0f0f0;
 }
 
+#addproduct {
+  text-align: right;
+  margin-top: 100 px;
+}
+
 /*body*/
+
+p, .field, .action {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.nav navbar-nav {
+  text-align: right;
+}
+
+.top {
+  margin-top: 100px;
+}
+.navbar-brand {
+  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+  font-size: 1.5em;
+  color: gray;
+}
 
 body { 
   background-color: #fff;
@@ -24,8 +50,6 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  padding-left: 25px;
-  padding-right: 25px;
   margin-bottom: 60px;
 }
 
