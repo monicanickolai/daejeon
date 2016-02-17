@@ -1,8 +1,30 @@
+/*Contact*/
+
+.contact {
+  width:80%;
+  margin:0 auto;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.form-group {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.panel-body {
+  text-align: center;
+}
+
 /*Products*/
 h3 {
   font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   color: gray;
   margin-top: 100px;
  }
@@ -27,9 +49,10 @@ h3 {
 
 /*body*/
 
-p {
-  margin-left: 25px;
-  margin-right: 25px;
+/*Carousel*/
+
+.carousel-slide {
+  margin-top: 50px;
 }
 
 .nav navbar-nav {
