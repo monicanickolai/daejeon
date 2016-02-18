@@ -1,10 +1,16 @@
 <h1>Contact</h1>
 <div class="contact">
 <%= flash[:notice] %>
-<p>Check out our blog at djartsco.org or like the Daejeon Arts Collective on Facebook</p>
+<center>
+	<p>Check out our blog at djartsco.org or 'like' Daejeon Arts Collective on Facebook</p>
+    <a href="www.djartsco.org"><%= image_tag("wordpress.png") %></a>
+	&nbsp; &nbsp; &nbsp;
+	<a href="https://www.facebook.com/DaejeonArtsCollective/?fref=ts" ><%= image_tag("facebook.png") %></a>
+</center>
+<br>
 
 <%= form_tag("/static_pages/thank_you") do %>
-<div class="row">
+<div class="row" ">
 	<div class="col-sm-12">
 		<div class="form-group">
 			<%=label_tag :name, "Name" %>
@@ -17,7 +23,7 @@
 		<div class="form-group">
 			<%= label_tag :message, "Message" %>
 			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
-			<%= submit_tag "Send" %>
+			<%= submit_tag "Send", :class => "submit" %>
 		</div>
 	</div>
 </div>
