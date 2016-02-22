@@ -10,29 +10,39 @@
       </ul>
     </div>
   <% end %>
-
+<div class="col-lg-4 col-md-3 col-xs-1">&nbsp;</div>
+<div class="col-lg-4 col-md-6 col-xs-10">
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, autofocus: true, :class => "form-control", :placeholder => "Enter name" %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => "form-control", :placeholder =>"Enter description" %>
   </div>
   <div class="field">
     <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+    <%= f.text_field :image_url, :class => "form-control", :placeholder => "www.site.com" %>
   </div>
   <div class="field">
     <%=f.label :colour %><br>
-    <%=f.text_field :colour %>
+    <%=f.text_field :colour, :class => "form-control", :placeholder => "e.g. gray, blue, etc." %>
   </div>
   <div class="field">
         <%=f.label :price %><br>
-    <%=f.text_field :price %>
+    <%=f.text_field :price, :class => "form-control", :placeholder =>"₩ (Korean won)" %>
   </div>
   
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<br>
+<div class="product">
+  <%= link_to 'Show', @product %> |
+  <%= link_to 'Back', products_path %>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-3 col-xs-1">&nbsp;</div>
+<br>

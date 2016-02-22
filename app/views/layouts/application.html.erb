@@ -24,7 +24,7 @@
       <%= link_to image_tag("navbar.png"), root_path %> </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-left">
         <li><%= link_to 'Products', products_path %></li>
         <li><%= link_to 'About', static_pages_about_path %></li>
         <li><%= link_to 'Contact', static_pages_contact_path %></li>
@@ -37,21 +37,23 @@
         </li>
         <% end %>
       </ul>
-      <ul class="nav pull-right">
-        <li>
+      <ul class="pull-right" id="logout">
           <% if user_signed_in? %>
             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-          <% else %>
+          <% else %> 
             <%= link_to('Login', new_user_session_path) %>
           <% end %>
-        </li>
+        </div>
       </ul>
-    </div>
 </div>
 </nav>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if notice %>
+  <p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
 
+<% if notice %>
+  <p id="alert" class="alert alert-warning"><%= alert %></p>
+<% end %>
 <%= yield %>
 
 <footer>

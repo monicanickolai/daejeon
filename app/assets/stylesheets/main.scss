@@ -20,6 +20,7 @@
   text-align: center;
 }
 /*Registration*/
+
 .spacer {
   margin: 0 auto;
 }
@@ -27,10 +28,9 @@
 /*Products*/
 h3 {
   font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
-  text-align: center;
-  font-size: 2em;
+  text-align: left;
+  font-size: 1.5em;
   color: gray;
-  margin-top: 100px;
  }
  
 #addproduct {
@@ -51,6 +51,10 @@ h3 {
   margin-top: 100 px;
 }
 
+#product {
+  min-height: 5000px;
+}
+
 /*body*/
 
 /*Carousel*/
@@ -59,17 +63,17 @@ h3 {
   margin-top: 50px;
 }
 
-.nav navbar-nav {
-  text-align: right;
-
-}
-
 .top {
   margin-top: 100px;
 }
 
 li {
  font-family: verdana, arial, helvetica, sans-serif; 
+}
+
+ul {
+ font-family: verdana, arial, helvetica, sans-serif; 
+ color: gray;
 }
 
 body { 

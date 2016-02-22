@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Products</h1>
-<p id="addproduct"> <%= link_to 'Add Product', new_product_path, id: "addproduct" %> </p>
+<button type="submit" class="btn btn-default" id="addproduct" <%= link_to 'Add Product', new_product_path %> </button>
 
 <div class="container-fluid">
   <div class="row">
+    <div class="grid">
     <% @products.each do |product| %>
       <div class="col-sm-2 col-md-4">
-        <h3><%= product.name %></h3>
         <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
+        <h3><%= product.name %></h3>
+        
 <!--        <p><%= product.description %></p>
         <p><%= product.colour %></p> -->
         <p><%= product.price %></p>
@@ -18,4 +20,5 @@
       </div><!-- /col -->
     <% end %>
   </div>
+</div>
 </div>
