@@ -1,28 +1,13 @@
 <p id="notice"><%= notice %></p>
+	<div class="center-block col-lg-4 col-md-6 col-xs-10 top" id="cutoff">		
+		<%= image_tag(@product.image_url, class: "img-responsive product_image") %>
+		<h3><%= @product.name %></h3>
+		<p class="product"><%= @product.description %></p>
+		<p class="product"><strong>Colour:</strong><%=@product.colour %></p>
+		<p class="product"><strong>Price:</strong><%=@product.price %></p>
+		<div class="edit">
+  			<%= link_to 'Edit', edit_product_path(@product) %> |
+  			<%= link_to 'Back', products_path %>
+		</div>
+	</div>
 
-<h3 class="top">
-  <%= @product.name %>
-</h3>
-
-<p class="product">
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<div class="product">
-<%= image_tag(@product.image_url, class: "img-responsive", :class => "product_image") %>
-</div>
-
-<p class="product">
-	<strong>Colour:</strong>
-	<%=@product.colour %>
-</p>
-<p class="product">
-	<strong>Price:</strong>
-	<%=@product.price %>
-</p>
-
-<div class="edit">
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
-</div>

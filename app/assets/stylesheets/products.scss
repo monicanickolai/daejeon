@@ -2,23 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.edit {
-	text-align: center;
-}
-
-.product {
-	text-align: center;
-}
-
-.product_image {
-    text-align: center;
-}
-
-#product {
-	min-height: 5000px;
-}
-
+/*Products*/
+ 
 #addproduct {
-	margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+
+.edit {
+  text-align: center;
+}
+
+.addproductbtn {
+  margin: 25px;
+}
+
+.productgrid {
+  min-height: 375px;
+}
+
+.productimg {
+  max-height: 300px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#cutoff {
+
+  height: 100%;
+  padding-left: 25px;
 }

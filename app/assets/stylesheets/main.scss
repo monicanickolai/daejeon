@@ -25,55 +25,51 @@
   margin: 0 auto;
 }
 
-/*Products*/
-h3 {
-  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
-  text-align: left;
-  font-size: 1.5em;
-  color: gray;
- }
- 
-#addproduct {
-  text-align: center;
-}
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#addproduct {
-  text-align: right;
-  margin-top: 100 px;
-}
-
-#product {
-  min-height: 5000px;
-}
-
-/*body*/
-
 /*Carousel*/
 
 .carousel-slide {
   margin-top: 50px;
 }
 
+/*navbar*/
+
+.mtop12 { 
+  margin-top: 12px; 
+} 
+
 .top {
   margin-top: 100px;
 }
 
-li {
+.nav li {
  font-family: verdana, arial, helvetica, sans-serif; 
 }
 
-ul {
+.nav ul {
  font-family: verdana, arial, helvetica, sans-serif; 
  color: gray;
+}
+
+/*fonts*/
+h3 {
+  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+  text-align: left;
+  font-size: 1.5em;
+  color: gray;
+ }
+
+h4 {
+  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+  text-align: center;
+  font-size: 1.5em;
+  color: gray;
+  text-align: center;
+ }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body { 

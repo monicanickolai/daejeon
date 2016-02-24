@@ -1,24 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Products</h1>
- <%= link_to 'Add Product', new_product_path %>
-
+ <%= link_to 'Add Product', new_product_path, :class => "btn btn-default addproductbtn" %>
 <div class="container-fluid">
   <div class="row">
-    <div class="grid">
     <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
-        <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
-        <h3><%= product.name %></h3>
+    <div class="col-sm-10 col-md-6 col-lg-4">
+      <div class="thumbnail productgrid">
         
-<!--        <p><%= product.description %></p>
+        <%= link_to image_tag(product.image_url, class: "img-responsive productimg"), product %>
+        <h3><%= product.name %></h3>       
+<!--    <p><%= product.description %></p>
         <p><%= product.colour %></p> -->
         <p><%= product.price %></p>
-        <%= link_to 'View', product %>
+        <%= link_to 'View', product, :class => "btn btn-default view" %>
 <!--        <%= link_to 'Edit', edit_product_path(product) %>
         <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %> -->
-      </div><!-- /col -->
+      </div>
+    </div>
     <% end %>
   </div>
+  
 </div>
-</div>
+<hr/>
