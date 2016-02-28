@@ -1,3 +1,78 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body { 
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 60px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: right;
+  padding: 5px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 60px;
+}
+
+h1 {
+  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+  text-align: center;
+  font-size: 5em;
+  color: gray;
+  margin-top: 80px;
+}
+
+h2 {
+  font-family: verdana;
+  text-align: center;
+  font-size: 2em;
+  color: gray;
+  padding: 5px;
+}
+
+h3 {
+  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+  text-align: left;
+  font-size: 1.5em;
+  color: gray;
+ }
+
+h4 {
+  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
+  text-align: center;
+  font-size: 1.5em;
+  color: gray;
+  text-align: center;
+ }
+
+ .tleft {
+   text-align: left;
+ }
+
+.tcenter {
+  text-align: center;
+}
+
+
+p {
+  font-family: verdana;
+  font-size: 1em;
+}
+
+.mtop20 {
+  margin-top: 20px;
+}
+
 /*Contact*/
 
 .contact {
@@ -50,44 +125,5 @@
  color: gray;
 }
 
-/*fonts*/
-h3 {
-  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
-  text-align: left;
-  font-size: 1.5em;
-  color: gray;
- }
 
-h4 {
-  font-family: Palatino, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,serif;
-  text-align: center;
-  font-size: 1.5em;
-  color: gray;
-  text-align: center;
- }
 
-body { 
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  margin-bottom: 60px;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  text-align: right;
-  padding: 5px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-top: 60px;
-}
