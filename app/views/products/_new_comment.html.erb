@@ -1,9 +1,11 @@
 <% if signed_in? %>
-	<h4>Add a review:</h4>
+	<h1 class="center sm-heading">Add a review:</h1>
 	<%= form_for([@product, @product.comments.build]) do |f| %>
 	<p>
-		<%= f.label :body, "Comments" %><br>
-		<%= f.text_area :body %>
+		<div class="form-group">
+			<%= f.label :body, "Comments" %><br>
+			<%= f.text_area :body, :class => "form-control", :placeholder =>"Your comments", autofocus: true %>
+		
 	</p>
 	
 	<p>
@@ -11,7 +13,9 @@
 	</p>
 	
 	<p>
-		<%= f.submit "Submit" %>
+		<%= f.submit "Submit", :class => "btn btn-default mbottom200"  %>
+		</div>
 	</p>
+		</div>
 	<% end %>
 <% end %>

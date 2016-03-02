@@ -1,8 +1,8 @@
-<h1>Contact</h1>
+<h1 class="mtop80 center lg-heading">Contact</h1>
 <div class="contact">
 <%= flash[:notice] %>
 <center>
-	<p>Check out our blog at djartsco.org or 'like' Daejeon Arts Collective on Facebook</p>
+	<p class="mtop20">Check out our blog at djartsco.org or 'like' Daejeon Arts Collective on Facebook</p>
     <a href="www.djartsco.org"><%= image_tag("wordpress.png") %></a>
 	&nbsp; &nbsp; &nbsp;
 	<a href="https://www.facebook.com/DaejeonArtsCollective/?fref=ts" ><%= image_tag("facebook.png") %></a>
@@ -10,7 +10,7 @@
 <br>
 
 <%= form_tag("/static_pages/thank_you") do %>
-<div class="row" ">
+<div class="row">
 	<div class="col-sm-12">
 		<div class="form-group">
 			<%=label_tag :name, "Name" %>
@@ -23,7 +23,7 @@
 		<div class="form-group">
 			<%= label_tag :message, "Message" %>
 			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
-			<%= submit_tag "Send", :class => "submit" %>
+			<%= submit_tag "Send", :class => "submit btn btn-default mtop20" %>
 		</div>
 	</div>
 </div>

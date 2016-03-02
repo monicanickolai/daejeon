@@ -1,17 +1,24 @@
 <p id="notice"><%= notice %></p>
-	<div class="center-block col-lg-4 col-md-6 col-xs-10 top" id="cutoff">		
+	<div class="col-lg-6 col-md-8 col-xs-10 top">		
 		<%= image_tag(@product.image_url, class: "img-responsive product_image") %>
 		<h3><%= @product.name %></h3>
 		<p class="product"><%= @product.description %></p>
 		<p class="product"><strong>Colour:</strong><%= @product.colour %></p>
 		<p class="product"><strong>Price:</strong><%= number_to_currency(@product.price, unit: "₩") %></p>
-		<%= @product.comments %>
-		<%= @product.comments.new %>
-		<div class="edit">
-  			<%= link_to 'Edit', edit_product_path(@product) %> |
+		<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"> </div> </p>
+	
+		<%= render partial: 'new_comment' %>
+		<div class="center mbottom200">
+  			<%= link_to 'Edit Product', edit_product_path(@product) %> |
   			<%= link_to 'Back', products_path %>
 		</div>
-
-
 	</div>
+
+	<div class="col-lg-4 col-med-4 col-xs10 fleft mtop80 mleft50">
+		<%= render partial: 'comments' %>
+	</div>
+
+
+
+	
 
