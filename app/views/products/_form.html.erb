@@ -1,44 +1,45 @@
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <div class="alert alert-warning center" role="alert">
+      <p><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</p>
 
       <ul>
       <% @product.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
-      </ul>
+      </ul></div>
     </div>
   <% end %>
 <div class="col-lg-4 col-md-3 col-xs-1">&nbsp;</div>
 <div class="col-lg-4 col-md-6 col-xs-10">
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name, autofocus: true, :class => "form-control", :placeholder => "Enter name" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :description %><br>
     <%= f.text_area :description, :class => "form-control", :placeholder =>"Enter description" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :image_url %><br>
     <%= f.text_field :image_url, :class => "form-control", :placeholder => "www.site.com" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%=f.label :colour %><br>
     <%=f.text_field :colour, :class => "form-control", :placeholder => "e.g. gray, blue, etc." %>
   </div>
-  <div class="field">
+  <div class="field form-group">
         <%=f.label :price %><br>
     <%=f.text_field :price, :class => "form-control", :placeholder =>"₩ (Korean won)" %>
   </div>
   
-  <div class="actions btn btn-default">
-    <%= f.submit %>
+<div class="center">
+    <%= f.submit :class => "btn btn-default center" %>
   </div>
 <% end %>
 <br>
-<div class="product">
+<div class="center mtop20">
   <%= link_to 'Show', @product %> |
   <%= link_to 'Back', products_path %>
 </div>

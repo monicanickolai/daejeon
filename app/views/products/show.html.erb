@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-	<div class="col-lg-6 col-md-8 col-xs-10 top">		
+	<div class="col-lg-9 col-md-8 col-xs-10 top">		
 		<%= image_tag(@product.image_url, class: "img-responsive product_image") %>
 		<h3><%= @product.name %></h3>
 		<p class="product"><%= @product.description %></p>
@@ -14,7 +14,7 @@
 		</div>
 	</div>
 
-	<div class="col-lg-4 col-med-4 col-xs10 fleft mtop80 mleft50">
+	<div class="col-lg-2 col-med-3 col-xs10 fleft mleft50 mbottom200">
 		<%= render partial: 'comments' %>
 	</div>
 
