@@ -1,21 +1,21 @@
-<div class="col-lg-9 col-md-8 col-xs-10 top">		
+<div class="row mtop20">
+  <div class="col-lg-9 col-md-8 col-xs-10">		
 	<%= image_tag(@product.image_url, class: "img-responsive product_image") %>
+  </div>
 	<h3><%= @product.name %></h3>
 	<p class="product"><%= @product.description %></p>
 	<p class="product"><strong>Colour:</strong><%= @product.colour %></p>
 	<p class="product"><strong>Price:</strong><%= number_to_currency(@product.price, unit: "₩") %></p>		
 	<div class="center">
-			<%= link_to 'Edit Product', edit_product_path(@product) %> |
+			<%= link_to 'Edit', edit_product_path(@product) %> |
 			<%= link_to 'Back', products_path %>
 	</div>
-	<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"> </div> </p>
-
-	<%= render partial: 'new_comment' %>
-
+  
 </div>
-
-<div class="col-lg-2 col-med-3 col-xs10 fleft mleft50 mbottom200">
-	<%= render partial: 'comments' %>
+<div class="container mtop20">
+	<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"> </div> </p>
+    <%= render partial: 'comments' %>
+	<%= render partial: 'new_comment' %>
 </div>
 
 
