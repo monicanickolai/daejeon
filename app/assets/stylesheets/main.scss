@@ -12,7 +12,13 @@ body {
   margin-bottom: 60px;
 }
 
+.thumbnail {
+  height: 400px;
+}
 
+.productimg {
+  max-height: 300px;
+}
 
 footer {
   background-color: black;
@@ -46,10 +52,6 @@ h3 {
   color: gray;
  }
 
- .tleft {
-   text-align: left;
- }
-
 .tcenter {
   text-align: center;
 }
@@ -76,15 +78,15 @@ p {
   margin-bottom: 200px;
 }
 
+.mtop12 { 
+  margin-top: 12px; 
+} 
+
 .mleft50 {
   margin-left: 50px;
 }
 .mtop20 {
   margin-top: 20px;
-}
-
-.mtop80 {
-  margin-top: 80px;
 }
 
 .sm-heading {
@@ -124,15 +126,11 @@ p {
 
 /*Carousel*/
 
-.carousel-slide {
-  margin-top: 50px;
+.carousel-inner > .item, .carousel-inner > .item > img.scale {
+  max-height: 500px;
 }
 
 /*navbar*/
-
-.mtop12 { 
-  margin-top: 12px; 
-} 
 
 .top {
   margin-top: 100px;

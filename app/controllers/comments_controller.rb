@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
 				format.json { render :show, status: :created, location: @product }
 			else
 				format.html { redirect_to @product, alert: 'Review was not saved successfully.'}
-				forat.json { render json: @comment.errors, stuats: :unproccessable_entity }
+				format.json { render json: @comment.errors, stuats: :unproccessable_entity }
 			end
 		end
 	end
@@ -20,6 +20,10 @@ class CommentsController < ApplicationController
 	#end
 
 	def destroy
+		@comment = Comment.find(params[:id])
+		product = @comment.product
+		@comment.destroy
+		redirect_to product
 	end
 
 	private

@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+<nav class="navbar navbar-inverse" role="navigation"> 
   <div class="container-fluid"> 
     <div class="navbar-header"> 
       <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
@@ -52,14 +52,23 @@
   </div> 
 </nav> 
 
-<% if notice %>
-  <p id="notice" role="alert" class="alert alert-info"><%= notice %></p>
-<% end %>
+<div class="container">
+  <% if notice %>
+    <p id="notice" class="alert alert-info fade in">
+      <button class="close" data-dismiss="alert">×</button>
+      <%= notice %>
+    </p>
+  <% end %>
 
-<% if notice %>
-  <p id="alert" role="alert" class="alert alert-warning"><%= alert %></p>
-<% end %>
-<%= yield %>
+  <% if alert %>
+    <p id="alert" role="alert" class="alert alert-warning fade in">
+      <button class="close" data-dismiss="alert">×</button>
+      <%= alert %>
+    </p>
+  <% end %>
+
+  <%= yield %>
+</div>
 
 <footer>
 	<p>&copy; 2015 Monica Nickolai</p></footer>
