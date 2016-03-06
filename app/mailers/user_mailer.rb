@@ -9,8 +9,8 @@ class UserMailer < ApplicationMailer
 	end
 
 	def welcome(user)
-		@appname = "Daejeon Arts Collective"
-		mail( :to => user.email,
-			:subject => "Welcome to #{@appname}!")
+	  @appname = "Daejeon Arts Collective"
+	  mail( :to => user.email,
+	        :subject => "Welcome to #{@appname}!")
 	end
 end
