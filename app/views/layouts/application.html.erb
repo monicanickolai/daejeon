@@ -24,6 +24,8 @@
     <div class="nav navbar-nav navbar-right"> 
       <% if user_signed_in? %> 
       <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "navbar-brand") %> 
+      <%= link_to('Edit Profile', edit_user_path(current_user) , class: "navbar-brand") %>
+      
       <% else %> 
       <%= link_to('Login', new_user_session_path, class: "navbar-brand") %> 
       <% end %> 
