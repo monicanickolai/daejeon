@@ -7,9 +7,10 @@ class Ability
     		can :manage, :all
     	else
     can :manage, User, id: user.id
-    can :manage, Product, id: user.id 
+    can :manage, Product 
+    can [:edit, :update, :destroy], Product, user_id: user.id
+    can :destroy, Comment
     can :read, :all
-    can :create, Product
   end
 end
 end

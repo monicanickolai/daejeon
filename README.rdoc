@@ -1,2 +1,1 @@
-== I am a writer and multi-media artist interested in language and story-telling. Currently, I am interested in web development and design.
-This web app is designed to give my fellow artists a chance to promote and sell their work outside of a gallery system, creating cheaper prices for patrons of art and higher profits for artists.
+== This web app is designed to give my fellow artists a chance to promote and sell their work outside of a gallery system, creating cheaper prices for patrons of art and higher profits for artists.
