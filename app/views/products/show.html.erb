@@ -7,9 +7,9 @@
 	<p class="product"><strong>Colour:</strong><%= @product.colour %></p>
 	<p class="product"><strong>Price:</strong><%= number_to_currency(@product.price, unit: "₩") %></p>		
 	<div class="center">
-			<% if can? :update, @product %>
+			<%# if can? :update, @product %>
 			<%= link_to 'Edit', edit_product_path(@product) %> |
-			<% end %>
+			<%# end %>
 			<%= link_to 'Back', products_path %>
 	</div>
   
