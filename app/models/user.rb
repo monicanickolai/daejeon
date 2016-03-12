@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 	has_many :orders
+
+	after_create :send_welcome_mail
+
+private
+
+  def send_welcome_mail
+    UserMailer.welcome(self).deliver_now
+  end
 end
