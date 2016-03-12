@@ -1,7 +1,9 @@
-<p id="notice"><%= notice %></p>
 <div class="container">
-<h1 class="center lg-heading">Listing Products</h1>
- <%= link_to 'Add Product', new_product_path, :class => "btn btn-default fright" %>
+<h1 class="center lg-heading">Listing Products
+ <% if user_signed_in? %>
+ <%= link_to 'Add Product', new_product_path, :class => "btn btn-default fright mtop20" %>
+<% end %>
+</h1>
 </div>
 <div class="container-fluid">
   <div class="row">
@@ -9,7 +11,7 @@
     <div class="col-sm-10 col-md-6 col-lg-6">
       <div class="thumbnail productgrid">
         <%= link_to image_tag(product.image_url, class: "img-responsive productimg"), product %>
-        <h3 class="tcenter"><%= product.name %></h3>       
+        <h1 class="tcenter sm-heading"><%= product.name %></h1>       
 <!--    <p><%= product.description %></p>
         <p><%= product.colour %></p> -->
         <p class="tcenter"><%= number_to_currency(product.price, unit: "₩") %></p>
