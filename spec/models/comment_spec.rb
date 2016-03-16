@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Product do
+describe Comment do
 context "when the product has comments" do
 	before do
 		@product = Product.create!(name: "painting")
