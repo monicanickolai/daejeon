@@ -4,11 +4,11 @@ describe Product do
 
 	context "Product has no name" do
 		before do
-		@product = Product.new(description: "Nice bike")
+		@product = FactoryGirl.build(:product, name: "Huffy", description: "Nice bike")
 	end
 
 	it "is valid" do
-		expect(Product.new(name: "Huffy", description: "Nice bike")).to be_valid
+		expect(@product).to be_valid
 	end
 
 	it "is invalid" do
