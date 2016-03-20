@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Product do
+describe Product do 
 
 	context "Product has no name" do
 		before do
