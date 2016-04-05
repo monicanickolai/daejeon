@@ -7,8 +7,8 @@ def create
 	# Create the charge on Stripe's servers -this will charge the user's card
 	begin
 		charge = Stripe::Charge.create(
-			:amount => (@product.price, unit: "₩") 
-			:currency => "krw",
+			:amount => (@product.price) 
+			:currency => "usd",
 			:source => token,
 			:description => params[:stripeEmail]
 		)
