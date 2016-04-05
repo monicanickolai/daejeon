@@ -12,6 +12,15 @@ def create
 			:source => token,
 			:description => params[:stripeEmail]
 		)
+
+		if charge.paid
+			Order.create(
+				product_id: @product
+				user_id: @user_id
+				total: @product.price
+				)
+		end
+
 	rescue Stripe::CardError => e
 		# declined card
 		body = e.json_body
