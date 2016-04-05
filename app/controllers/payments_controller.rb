@@ -20,3 +20,4 @@ def create
 	end
 	redirect_to product_path(product)
 end
+end
