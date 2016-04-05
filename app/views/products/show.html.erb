@@ -6,8 +6,8 @@
 	<p class="product"><%= @product.description %></p>
 	<p class="product"><strong>Colour:</strong><%= @product.colour %></p>
 	<p class="product"><strong>Price:</strong><%= number_to_currency(@product.price, unit: "₩") %></p>
-	<%= form_tag "/payments/create" do %>
-  <%= render partial: "shared/stripe_checkout_button" %>
+	<%= form_tag "/payments" do %>
+  	<%= render partial: "shared/stripe_checkout_button" %>
 <% end %>
 
 		

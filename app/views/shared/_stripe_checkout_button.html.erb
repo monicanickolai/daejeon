@@ -6,3 +6,4 @@
   data-description=<%= @product.description %>
   data-amount=<%= number_to_currency(@product.price, unit: "₩") %> >
 </script>
+<%= hidden_field_tag(@product.id, name: :product_id) %>
