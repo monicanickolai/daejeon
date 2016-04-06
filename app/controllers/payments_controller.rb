@@ -7,7 +7,7 @@ def create
 	# Create the charge on Stripe's servers -this will charge the user's card
 	begin
 		charge = Stripe::Charge.create(
-			:amount => (@product.price), 
+			:amount => (@product.price*100).to_i, 
 			:currency => "usd",
 			:source => token,
 			:description => params[:stripeEmail]
@@ -19,7 +19,7 @@ def create
 				user_id: @user,
 				total: @product.price
 				)
-			flash[:success] = "Thank you for your purchase."
+			
 		end
 
 	rescue Stripe::CardError => e
@@ -28,6 +28,6 @@ def create
 		err = body[:error]
 		flash[:error] = "Unfortunately, there was an error processing your payment: #{error[:message]}"
 	end
-	redirect_to product_path(product)
+	redirect_to "payments"
 end
 end
