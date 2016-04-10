@@ -23,7 +23,6 @@ class ProductsController < ApplicationController
   end
 
   def index
-    logger.debug
     if params[:q]
       search_term = params[:q]
         if Rails.env.development?

@@ -18,7 +18,6 @@ class CommentsController < ApplicationController
 	#	@comment.save
 	#	redirect_to product_path(@product)
 	#end
-byebug
 	def destroy
 		@comment = Comment.find(params[:id])
 		product = @comment.product
