@@ -19,7 +19,7 @@ def create
 				user_id: @user,
 				total: @product.price
 				)
-			
+		flash[:notice] = "Thank you for your purchase!"	
 		end
 
 	rescue Stripe::CardError => e
@@ -28,6 +28,6 @@ def create
 		err = body[:error]
 		flash[:error] = "Unfortunately, there was an error processing your payment: #{error[:message]}"
 	end
-	redirect_to "payments"
+	redirect_to product_path(@product)
 end
 end
