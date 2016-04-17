@@ -67,6 +67,10 @@ p {
   font-size: 1em;
 }
 
+.mbottom50 {
+  margin-bottom: 50px;
+}
+
 .mtop12 { 
   margin-top: 12px; 
 } 
@@ -117,7 +121,11 @@ p {
   margin: 0 auto;
 }
 
+/*Carousel*/
 
+.carousel-inner {
+  margin: 50px;
+}
 
 /*navbar*/
 

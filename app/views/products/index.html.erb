@@ -1,10 +1,43 @@
 <div class="container">
-<h1 class="center lg-heading">Listing Products
- <% if user_signed_in? %>
+
+ <% if can? :add, @product %>
  <%= link_to 'Add Product', new_product_path, :class => "btn btn-default fright mtop20" %>
 <% end %>
-</h1>
 </div>
+
+<!--Begin carousel-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <% @products.each do |product| %>
+    <li data-target="#carousel-example-generic<%= " active" if product == @products.first %>">
+    <% end %>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <% @products.each do |product| %>
+      <div class="item<%= " active" if product == @products.first %> img-responsive center-block">
+        <%= image_tag(product.image_url) %>
+        <div class="carousel-caption">
+          <p><%= product.name %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!--End carousel, Begin product index-->
+<h1 class="center lg-heading mbottom50">Online Gallery of the Daejeon Arts Collective</h1>
 <div class="container-fluid">
   <div class="row">
     <% @products.each do |product| %>
