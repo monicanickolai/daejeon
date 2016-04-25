@@ -2,7 +2,7 @@
   <div class="col-lg-9 col-md-8 col-xs-10">		
 	<%= image_tag(@product.image_url, class: "img-responsive product_image img-zoom", data_zoom_image: @product.image_url) %>
   </div>
-  <% cashe @product do %>
+  <% cache @product do %>
 	<h1 class="sm-heading"><%= @product.name %></h1>
 	<p class="product"><%= @product.description %></p>
 	<p class="product"><strong>Colour:</strong><%= @product.colour %></p>

@@ -1,21 +1,14 @@
 <% if signed_in? %>
-	<h1 class="center sm-heading">Add a review:</h1>
 	<%= form_for([@product, @product.comments.build], remote: true) do |f| %>
-	<p>
+
+      <h1 class="center sm-heading">Add a review:</h1>
 		<div class="form-group">
 			<!--<%= f.label :body, "Comments" %><br>-->
 			<%= f.text_area :body, :class => "form-control", :placeholder =>"Enter your comments" %>
-		
-	</p>
-	
-	<p>
-		<div class="rating"></div>"Rating required"
-	</p>
-	
-	<p>
-		<%= f.submit "Submit", :class => "btn btn-default mbottom200"  %>
+			<div class='mleft5'> Rating required </div>
+			<div class="rating"></div>		
 		</div>
-	</p>
-		</div>
+
+		<%= f.submit "Submit", :class => "btn btn-default mleft75"  %>
 	<% end %>
 <% end %>
