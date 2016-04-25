@@ -2,12 +2,14 @@
   <div class="col-lg-9 col-md-8 col-xs-10">		
 	<%= image_tag(@product.image_url, class: "img-responsive product_image img-zoom", data_zoom_image: @product.image_url) %>
   </div>
+  <% cashe @product do %>
 	<h1 class="sm-heading"><%= @product.name %></h1>
 	<p class="product"><%= @product.description %></p>
 	<p class="product"><strong>Colour:</strong><%= @product.colour %></p>
 	<p class="product"><strong>Price:</strong><%= number_to_currency(@product.price) %></p>
 	<%= form_tag "/payments" do %>
 	<%= hidden_field_tag "product_id", @product.id %>
+	<% end %>
   	<%= render partial: "shared/stripe_checkout_button" %>
 <% end %>
 

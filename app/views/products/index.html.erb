@@ -36,20 +36,18 @@
   </a>
 </div>
 <!--End carousel, Begin product index-->
+
 <h1 class="center lg-heading mbottom50">Our Gallery</h1>
 <div class="container-fluid">
   <div class="row">
+    <% cashe(cache_key_for@products) do %>
     <% @products.each do |product| %>
     <div class="col-sm-10 col-md-6 col-lg-6">
       <div class="thumbnail productgrid">
         <%= link_to image_tag(product.image_url, class: "img-responsive productimg"), product %>
         <h1 class="tcenter sm-heading"><%= product.name %></h1>       
-<!--    <p><%= product.description %></p>
-        <p><%= product.colour %></p> -->
         <p class="tcenter"><%= number_to_currency(product.price, unit: "$") %></p>
-<!--        <%= link_to 'View', product, :class => "btn btn-default view" %> -->
-<!--        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+<% end %>
       </div>
     </div>
     <% end %>
