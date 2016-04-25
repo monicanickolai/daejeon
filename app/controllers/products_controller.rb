@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
+  respond_to :json, :html
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
+    respond_with @products
   end
 
   # GET /products/1
