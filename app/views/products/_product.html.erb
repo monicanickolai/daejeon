@@ -1,3 +1,9 @@
-<% cashe(cache_key_for@products) do %>
-<%= render @products %>
+<% cache product do %>
+  <div class="col-sm-10 col-md-6 col-lg-6">
+    <div class="thumbnail productgrid">
+      <%= link_to image_tag(product.image_url, class: "img-responsive productimg"), product %>
+      <h1 class="tcenter sm-heading"><%= product.name %></h1>       
+      <p class="tcenter"><%= number_to_currency(product.price, unit: "$") %></p>
+    </div>
+  </div>
 <% end %>
